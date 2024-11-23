@@ -15,7 +15,6 @@ public class JavaHomeController {
     private BuildingService buildingServices;
     @GetMapping(value = "/api/building")
     public List<BuildingDTO> getBuildings(@RequestBody Building building) {
-        System.out.println("oke");
         List<BuildingDTO>  result = buildingServices.findAll(building);
         return result;
     }
